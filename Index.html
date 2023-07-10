@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DD Services</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/86640baf71.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container">
+                    <h2 class="logo">DD Services</h2>
+                    <nav>
+                        <ul id="sidemenu">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#what's new">What's New</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><button class="btn">Contact Us</button></li>
+                            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    </nav>
+            </div>
+                <div class="content">
+                    <p>The best in the business<p>
+                    <h1><span>DD Services</span></h1>
+                    <p>We put our best to task and deivery your products <br> safely to your home in reasonable time</p>
+                    <button class="btn btn2">Get Started</button>
+                </div>
+         </div>
+
+
+         <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+        
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+
+
+
+    </body>
+</html>

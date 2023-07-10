@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+}
+.logo{
+    width: 300px;
+    color: #a03326;
+    font-size: 30px;
+    font-weight: 100;
+}
+.container{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #272838;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #a03326;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.content{
+    color: #272838;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+.btn{
+    display: inline block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #a03326;
+    padding: 14px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: background 0.5s;
+    background-color: #272838;
+}
+.btn.btn2{
+    display: inline block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #a03326;
+    padding: 14px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    background-color: #272838;
+}
+.btn:hover{
+    background: #a03326;
+    border: 1px solid #272838;
+    border-radius: 8px;
+    color: #272838;
+}
+.content{
+    margin-top: 3%;
+    font-size: 30px;
+    color: #272838;
+}
+.content h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.content h1 span{
+    color: #a03326;
+}
+
+
+
+/* ---------CSS For Small Screens----------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .container-fluid{
+        background-image: url(images/background.png);
+
+        background-position: center;
+    }
+    .content{
+        margin-top: 0%;
+        font-size: 16px;
+    }
+    .content h1{
+        font-size: 30px;
+    }nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #272838;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+}
