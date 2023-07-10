@@ -2,4 +2,4 @@
 Website welcome page
 
 Click link below
-https://zeus-bolts.github.io/Courier-Site/
+https://zeus-bolts.github.io/Courier-Site/#index.html
